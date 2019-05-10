@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">test</string>
+    <string name="url">https://www.google.com</string>
+    <string name="toast_test">This is a test toast message</string>
+</resources>

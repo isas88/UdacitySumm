@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test 1 Text"
+            android:layout_weight="1"/>
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="click"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/text2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Test 2 Text"
+        android:layout_weight="1"/>
+
+    <Button
+        android:id="@+id/button2"
+        android:onClick="button2Click"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="click"/>
+
+    </LinearLayout>
+
+
+        <android.support.v4.widget.DrawerLayout
+            android:id="@+id/fragment_drawer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <LinearLayout
+                android:id="@+id/fragment_linear"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/fragment_toolbar"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                android:theme="@style/ThemeOverlay.AppCompat.ActionBar">
+            </android.support.v7.widget.Toolbar>
+
+            <FrameLayout
+                android:id="@+id/fragment_frame"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+            </FrameLayout>
+
+            </LinearLayout>
+
+            <android.support.design.widget.NavigationView
+                android:id="@+id/fragment_nav_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                app:menu="@menu/menu_drawer"
+                app:headerLayout="@layout/nav_header"
+                android:background="@android:color/white"
+                />
+            </android.support.v4.widget.DrawerLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/url"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/url"
+            android:layout_margin="20dp"
+            />
+
+        <ListView
+            android:id="@+id/list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentBottom="true"
+            android:layout_alignBottom="@+id/url">
+        </ListView>
+
+    </RelativeLayout>
+
+</LinearLayout>
+
+    <!-- android:onClick="button2Click" -->
